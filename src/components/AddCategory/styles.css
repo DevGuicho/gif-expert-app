@@ -1,0 +1,26 @@
+.search {
+  display: flex;
+  width: auto;
+  margin: 10px 0;
+  border: 2px solid #cbd4e1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.search__input {
+  flex-grow: 1;
+  padding: 10px 10px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+  color: #64748b;
+}
+.search__button {
+  background: white;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #64748b;
+}
+.search.error {
+  border: 2px solid #d83232;
+}
