@@ -5,29 +5,27 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 const AddCategory = ({ setCategories, categories }) => {
-  const [inputValue, setInputValue] = useState({
-    category: '',
-  });
+  const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState(false);
 
-  const { category } = inputValue;
-
   const handleChange = (e) => {
-    setInputValue({
-      ...inputValue,
-      [e.target.name]: e.target.value,
-    });
+    setInputValue(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (categories.includes(inputValue.category)) {
+    if (categories.includes(inputValue)) {
       setError(true);
       return;
     }
+    if (inputValue.trim().length < 2) {
+      setError(true);
+      return;
+    }
+
     setCategories((prevState) => [inputValue.category, ...prevState]);
     setError(false);
-    setInputValue({ category: '' });
+    setInputValue('');
   };
 
   return (
@@ -38,7 +36,7 @@ const AddCategory = ({ setCategories, categories }) => {
         name="category"
         id="category"
         onChange={handleChange}
-        value={category}
+        value={inputValue}
       />
       <button className="search__button">
         <MdSearch size="25px" />

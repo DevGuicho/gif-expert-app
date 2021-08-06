@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import getGifs from '../utilities/getGifs';
 
-const useFetchGifs = ({ query = 'Dragon Ball Z' }) => {
+const useFetchGifs = ({ query = 'Dragon Ball Z' } = {}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [gifs, setGifs] = useState([]);
