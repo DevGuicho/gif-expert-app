@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <AddCategory /> debe mostrarse correctamente 1`] = `
+<form
+  className="search false"
+  onSubmit={[Function]}
+>
+  <input
+    className="search__input"
+    id="category"
+    name="category"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <button
+    className="search__button"
+  >
+    <MdSearch
+      size="25px"
+    />
+  </button>
+</form>
+`;

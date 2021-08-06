@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MdSearch } from 'react-icons/md';
+import PropTypes from 'prop-types';
 
 import './styles.css';
 
@@ -44,6 +45,11 @@ const AddCategory = ({ setCategories, categories }) => {
       </button>
     </form>
   );
+};
+
+AddCategory.propTypes = {
+  setCategories: PropTypes.func.isRequired,
+  categories: PropTypes.array.isRequired,
 };
 
 export default AddCategory;

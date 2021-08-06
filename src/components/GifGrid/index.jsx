@@ -14,7 +14,7 @@ const GifGrid = ({ category }) => {
       <h3 className="text__category">{category}</h3>
       <div className="grid__gifs">
         {gifs.map((gif) => (
-          <GifGridItem key={gif.id} img={gif} />
+          <GifGridItem key={gif.id} {...gif} />
         ))}
       </div>
     </div>
